@@ -17,6 +17,8 @@ def plot_decision_regions(X, y, classifier, resolution=0.02):
     x1_min, x1_max = X[:, 0].min() - 1, X[:, 0].max() + 1
     x2_min, x2_max = X[:, 1].min() - 1, X[:, 1].max() + 1
 
+    # 第一个xx1_array 就是 向下复制 len(xx2_array)行
+    # 第二个xx2_array 先转置 再向右复制 len(xx1_array)列
     xx1, xx2 = np.meshgrid(np.arange(x1_min, x1_max, resolution), np.arange(x2_min, x2_max, resolution))
 
     lab = classifier.predict(np.array([xx1.ravel(), xx2.ravel()]).T)

@@ -1,2 +1,4 @@
 .idea/
 data/aclImdb
+chapter13-master-pytorch/MNIST
+chapter13-master-pytorch/lightning_logs
